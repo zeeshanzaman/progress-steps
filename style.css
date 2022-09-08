@@ -73,6 +73,12 @@ body {
     border-color: var(--line-border-fill);
 }
 
+.btn-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn {
     background-color: var(--line-border-fill);
     color: #fff;
