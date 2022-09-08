@@ -39,7 +39,10 @@ function update() {
         }
     })
 
+    // create variable n get class active  
     const actives = document.querySelectorAll('.active')
+        // on click next button how much blue line fill up
+    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
 
-    console.log(actives.length, circles.length);
+
 }
