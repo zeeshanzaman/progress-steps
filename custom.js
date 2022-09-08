@@ -2,7 +2,7 @@
 const progress = document.getElementById('progress')
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
-const circles = document.getElementById('.circle')
+const circles = document.querySelectorAll('.circle')
 
 // stores vale in 1 means active 
 let currentActive = 1
@@ -18,7 +18,7 @@ next.addEventListener('click', () => {
     update()
 })
 
-// addEventListener for button increments
+// addEventListener for button discrements
 prev.addEventListener('click', () => {
         currentActive--
 
@@ -39,11 +39,12 @@ function update() {
         }
     })
 
-    // create variable n get class active  
+    // create variable and get class active  
     const actives = document.querySelectorAll('.active')
         // on click next button how much blue line fill up
     progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
 
+    // here we make a function for next and pevious disabled/ enabled
     if (currentActive === 1) {
         prev.disabled = true
     } else if (currentActive === circles.length) {
